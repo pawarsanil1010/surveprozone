@@ -8,12 +8,12 @@ namespace SurveProzone.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly AppDbContext _context;
+       // private readonly AppDbContext _context;
 
-        public AccountController(AppDbContext context)
-        {
-            _context = context;
-        }
+        //public AccountController(AppDbContext context)
+        //{
+       //     _context = context;
+       // }
 
         // GET: Login Page
         [HttpGet]
@@ -36,15 +36,14 @@ namespace SurveProzone.Controllers
                 return View(model);
             }
 
-            var user = _context.AdminUsers
-                .FirstOrDefault(x => x.Username == model.Username);
+            //var user = _context.AdminUsers
+            //.FirstOrDefault(x => x.Username == model.Username);
 
-            if (user != null && BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
+            if (model.Username == "admin" && model.Password == "yourpassword")
             {
-                HttpContext.Session.SetString("User", user.Username);
+                HttpContext.Session.SetString("User", model.Username);
                 return RedirectToAction("Index", "Admin");
             }
-
             ViewBag.Error = "Invalid Username or Password!";
             return View(model);
         }

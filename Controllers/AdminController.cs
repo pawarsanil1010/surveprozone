@@ -1,37 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using SurveProzone.Models;
-using System.Linq;
 
 namespace SurveProzone.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly AppDbContext _context;
-
-        public AdminController(AppDbContext context)
-        {
-            _context = context;
-        }
+        // ✅ TEMP: No database
 
         public IActionResult EditContent()
         {
-            var content = _context.SiteContents.FirstOrDefault();
-
-            if (content == null)
-            {
-                content = new SiteContent
-                {
-                    HeroTitle = "Welcome to SurveProzone",
-                    HeroSubtitle = "Your Safety, Our Priority",
-                    ButtonText = "Get Quote" // ✅ IMPORTANT
-                };
-
-                _context.SiteContents.Add(content);
-                _context.SaveChanges();
-            }
-
-            return View(content);
+            return View(); // no DB
         }
 
         [HttpPost]
@@ -39,22 +18,11 @@ namespace SurveProzone.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model); // ❌ stops empty submit
+                return View(model);
             }
 
-            var content = _context.SiteContents.FirstOrDefault();
-
-            if (content != null)
-            {
-                content.HeroTitle = model.HeroTitle;
-                content.HeroSubtitle = model.HeroSubtitle;
-                content.ButtonText = model.ButtonText;
-
-                _context.SaveChanges();
-            }
-
-            ViewBag.Message = "Updated Successfully!";
-            return View(content);
+            ViewBag.Message = "Updated Successfully! (Temp mode)";
+            return View(model);
         }
 
         public override void OnActionExecuting(ActionExecutingContext context)
@@ -66,6 +34,7 @@ namespace SurveProzone.Controllers
 
             base.OnActionExecuting(context);
         }
+
         public IActionResult Index()
         {
             var user = HttpContext.Session.GetString("User");
@@ -75,28 +44,15 @@ namespace SurveProzone.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var data = _context.ContactForms.ToList();
+            // ✅ TEMP: No DB data
+            ViewBag.Total = 0;
+            ViewBag.Today = 0;
+            ViewBag.Month = 0;
 
-            // Dashboard counts
-            ViewBag.Total = data.Count;
-            ViewBag.Today = data.Count(x => x.CreatedAt.Date == DateTime.Today);
-            ViewBag.Month = data.Count(x => x.CreatedAt.Month == DateTime.Now.Month);
+            ViewBag.ServiceLabels = new List<string>();
+            ViewBag.ServiceCounts = new List<int>();
 
-            // 🔥 PIE CHART FIX (IMPORTANT)
-            var serviceData = data
-                .Where(x => !string.IsNullOrEmpty(x.Service))
-                .GroupBy(x => x.Service.Trim())
-                .Select(g => new
-                {
-                    Service = g.Key,
-                    Count = g.Count()
-                })
-                .ToList();
-
-            ViewBag.ServiceLabels = serviceData.Select(x => x.Service).ToList();
-            ViewBag.ServiceCounts = serviceData.Select(x => x.Count).ToList();
-
-            return View(data);
+            return View(); // no model
         }
     }
 }

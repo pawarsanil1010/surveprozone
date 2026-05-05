@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "H:\\Projects\\SurveProzone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\surveprozone.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:surveprozone.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD348F01-D5C2-4A14-A6F8-B104FFB0D163}|SurveProzone.csproj|h:\\projects\\surveprozone\\views\\admin\\editcontent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -156,11 +156,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SurveProzone",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\SurveProzone.csproj",
               "RelativeDocumentMoniker": "SurveProzone.csproj",
@@ -171,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
@@ -183,31 +183,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "H:\\Projects\\SurveProzone\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T07:50:54.253Z"
+              "WhenOpened": "2026-04-17T07:50:54.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "H:\\Projects\\SurveProzone\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAAF8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T08:00:44.453Z"
+              "WhenOpened": "2026-04-17T08:00:44.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AdminController.cs",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -219,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -231,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "site.css",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -243,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -251,25 +253,24 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAACsAAABwZ2ZmZmYSwDMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T08:36:19.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T08:36:19.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\Projects\\SurveProzone\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T08:09:35.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SurveProzone.csproj",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\SurveProzone.csproj",
               "RelativeDocumentMoniker": "SurveProzone.csproj",
@@ -293,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "H:\\Projects\\SurveProzone\\Views\\Services\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Services\\Index.cshtml",
