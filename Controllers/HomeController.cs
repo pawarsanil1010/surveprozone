@@ -7,19 +7,17 @@ namespace SurveProzone.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AppDbContext _context;
+        //private readonly AppDbContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(AppDbContext context, ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
-            _context = context;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            var content = _context.SiteContents.FirstOrDefault();
-            return View(content);
+            return View(); // no DB call
         }
 
         public IActionResult AMC()
