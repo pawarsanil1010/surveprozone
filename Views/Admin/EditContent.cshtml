@@ -1,0 +1,30 @@
+﻿@model SurveProzone.Models.SiteContent
+
+<div class="container mt-5">
+    <h3>Edit Homepage</h3>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label>Hero Title</label>
+            <input asp-for="HeroTitle" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label>Subtitle</label>
+            <input asp-for="HeroSubtitle" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label>Button Text</label>
+            <input asp-for="ButtonText" class="form-control" />
+        </div>
+
+        <button class="btn btn-primary">Save</button>
+
+        @if (ViewBag.Message != null)
+        {
+            <p class="text-success mt-3">@ViewBag.Message</p>
+        }
+    </form>
+</div>

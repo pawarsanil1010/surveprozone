@@ -1,0 +1,141 @@
+﻿@using System.Text.Json
+@model List<SurveProzone.Models.ContactForm>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+<div class="container mt-5" >
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">📊 Customer Inquiries</h2>
+        <span class="badge bg-dark fs-6">Total: @Model.Count</span>
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-warning shadow-sm">
+            No inquiries found.
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body">
+                <div class="row g-3">
+
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow border-0 text-center p-3">
+                            <h5>Total Leads</h5>
+                            <h2 class="text-primary">@ViewBag.Total</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow border-0 text-center p-3">
+                            <h5>Today</h5>
+                            <h2 class="text-success">@ViewBag.Today</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow border-0 text-center p-3">
+                            <h5>This Month</h5>
+                            <h2 class="text-warning">@ViewBag.Month</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card shadow border-0 mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">📅 Last 7 Days Leads</h5>
+                        <canvas id="dailyChart" height="100"></canvas>
+                    </div>
+                </div>
+               
+
+               
+
+               
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                               
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Message</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    <td class="fw-semibold">@item.Name</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Phone</td>
+                                    <td class="text-muted">@item.Message</td>
+
+                                    <td class="text-center">
+                                        <!-- WhatsApp -->
+                                        <a class="btn btn-success btn-sm me-1"
+                                           target="_blank"
+                                           href="https://wa.me/91@(item.Phone)?text=Hello%20@(item.Name)">
+                                            💬
+                                        </a>
+
+                                        <!-- Call -->
+                                        <a class="btn btn-primary btn-sm"
+                                           href="tel:@item.Phone">
+                                            📞
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                count++;
+                            }
+                        
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        
+    }
+
+</div></div></div>
+<!-- Your dashboard cards -->
+<!-- Your chart canvas -->
+<!-- Your table -->
+<!-- 🔥 STEP 4: ADD HERE -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('dailyChart').getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: @Html.Raw(Json.Serialize(ViewBag.Days)),
+            datasets: [{
+                label: 'Leads',
+                data: @Html.Raw(Json.Serialize(ViewBag.Counts)),
+                borderWidth: 2,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+</script>

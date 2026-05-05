@@ -1,0 +1,59 @@
+﻿@model SurveProzone.Models.ContactForm
+<div class="card shadow p-4" data-aos="fade-right">
+    <h2>Contact Us</h2>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <input asp-for="Name" class="form-control" placeholder="Your Name" />
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="Email" class="form-control" placeholder="Email" />
+        </div>
+       <div class="mb-3"> <input asp-for="Phone" class="form-control" placeholder="Phone Number" />
+           </div>
+        <div class="mb-3">
+            <label>Select Service</label>
+            <select asp-for="Service" class="form-control">
+                <option value="">-- Select Service --</option>
+                <option value="CCTV">CCTV</option>
+                <option value="Biometric">Biometric</option>
+                <option value="AMC">AMC</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <textarea asp-for="Message" class="form-control" placeholder="Message"></textarea>
+        </div>
+
+        <button class="btn btn-primary">Send</button>
+
+
+    </form>
+    <a id="whatsappBtn" class="btn btn-success mt-3" target="_blank">
+        💬 Chat on WhatsApp
+    </a>
+    @if (ViewBag.Message != null)
+    {
+        <p class="text-success mt-3">@ViewBag.Message</p>
+    }
+</div>
+<script>
+    function generateWhatsAppLink() {
+        var name = document.getElementById("Name").value;
+        var phone = document.getElementById("Phone").value;
+        var message = document.getElementById("Message").value;
+
+        var text = "Hello, I am " + name +
+                   ". My phone: " + phone +
+                   ". Message: " + message;
+
+        var url = "https://wa.me/919370712145?text=" + encodeURIComponent(text);
+
+        document.getElementById("whatsappBtn").href = url;
+    }
+
+    document.querySelectorAll("input, textarea").forEach(el => {
+        el.addEventListener("input", generateWhatsAppLink);
+    });
+</script>

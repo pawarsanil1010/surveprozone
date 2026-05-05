@@ -1,0 +1,382 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+.service-card {
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+    .service-card:hover {
+        transform: scale(1.05);
+        background-color: #f8f9fa;
+    }
+.service-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        background-color: #f8f9fa;
+    }
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+h1 {
+    font-size: 2.5rem;
+}
+.card {
+    border-radius: 16px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: 0.2s;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.badge {
+    padding: 8px 12px;
+}
+.card {
+    transition: transform 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+.slider-img {
+    height: 500px;
+    object-fit: cover.slider-img
+
+{
+    height: 500px;
+    object-fit: cover;
+    transition: transform 5s ease;
+}
+
+.carousel-item.active .slider-img {
+    transform: scale(1.1); /* zoom effect */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.carousel-caption {
+    bottom: 20%;
+    z-index: 2;
+}
+
+    .carousel-caption h1 {
+        font-size: 40px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .slider-img {
+        height: 250px;
+    }
+}
+@media (max-width: 768px) {
+    .slider-img {
+        height: 250px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 22px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+}
+.btn {
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+.card {
+    transition: 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+html {
+    scroll-behavior: smooth;
+}
+/* Loader Background */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Smooth transition */
+body {
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+    /* Cards */
+    .dark-mode .card {
+        background: #1e1e1e;
+        color: #fff;
+    }
+
+    /* Navbar */
+    .dark-mode .navbar {
+        background: #000 !important;
+    }
+
+    /* Table */
+    .dark-mode .table {
+        color: #fff;
+    }
+
+    /* Inputs */
+    .dark-mode input,
+    .dark-mode textarea,
+    .dark-mode select {
+        background: #222;
+        color: #fff;
+        border: 1px solid #444;
+    }
+.navbar {
+    backdrop-filter: blur(10px);
+}
+.service-img {
+    height: 180px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+    .service-img:hover {
+        transform: scale(1.05);
+    }
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+    /* Image */
+    .service-card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: 0.4s;
+    }
+
+/* Title (always visible) */
+.service-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Hover overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Effects */
+.service-card:hover .overlay {
+    opacity: 1;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .service-card img {
+        height: 200px;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.carousel-caption {
+    z-index: 2;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .slider-img {
+        height: 300px;
+    }
+}
+.carousel-item {
+    position: relative;
+}
+
+/* Navbar background (glass effect) */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo-img {
+    height: 40px;
+    transition: 0.3s;
+}
+
+    .logo-img:hover {
+        transform: scale(1.05);
+    }
+
+/* Brand text */
+.brand-text {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.nav-link {
+    transition: 0.3s;
+}
+
+    .nav-link:hover {
+        color: #0d6efd !important;
+    }
+@media (max-width: 768px) {
+    .logo-img {
+        height: 30px;
+    }
+
+    .brand-text {
+        font-size: 16px;
+    }
+}
+.nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 600;
+}
+
+.custom-navbar {
+    background-color: #000 !important; /* pure black */
+    padding: 12px 0;
+}
+
+    .custom-navbar .navbar-brand {
+        color: #fff !important;
+        font-weight: 600;
+    }
+
+    .custom-navbar .nav-link {
+        color: #fff !important;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: #0d6efd !important; /* blue hover */
+        }
+
+.custom-navbar {
+    background-color: black !important;
+}
